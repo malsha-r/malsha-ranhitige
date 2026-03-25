@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;...&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "Datatype",sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    background-color: black
+}
+
+section {
+    scroll-margin-top: 40px; /* same or slightly more than navbar height */
+}
+/*Navigation Bar-----------------------------------------*/
+/* FULL WIDTH NAV BACKGROUND */
+.nav-wrapper {
+  width: 100%;
+  background-color:black;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* stay above other content */
+}
+
+
+/* NAV CONTAINER */
+.topnav {
+  max-width: 1224px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  background-color: black;
+  position: relative;
+}
+
+/* LEFT */
+.nav-left a img {
+  max-height: 50px;
+  width: auto;
+}
+
+/* MENU (CENTER + RIGHT COMBINED) */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a{
+  color: #f2f2f2;
+  text-decoration: none;
+  padding: 14px 0;
+  text-decoration: none;
+  margin-left: 16px;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom:3px solid transparent;
+}
+
+/* HOVER */
+.nav-menu a:hover,
+.nav-left a:hover {
+  color: #1ab0f7;
+    border-bottom: 3px solid #1ab0f7;
+    transition: 0.1s ease;
+}
+
+/* HAMBURGER */
+.icon {
+  display: none;
+  cursor: pointer;
+}
+
+.icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 5px;
+  transition: 0.4s;
+}
+
+.icon:hover{
+    background: #1ab0f7;
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+
+    .topnav{
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+.nav-left a img {
+  max-height: 40px;
+  width: auto;
+}
+
+  .nav-menu {
+    position: absolute;
+    top: 54px;
+    left: 0;
+    width: 100%;
+    background: black;
+    gap: 0;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .nav-menu a {
+    
+    border-top: 1px solid #444;
+  }
+
+  .topnav.active .nav-menu {
+    max-height: 500px;
+  }
+
+  .icon {
+    display: block;
+  }
+}
+
+/* HAMBURGER ANIMATION */
+.topnav.active .icon span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.topnav.active .icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.topnav.active .icon span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+/*Navigation Bar End------------------------------------------------*/
+
+/*Mobile First Design------------------------------------------------*/
+
+/*common section*/
+
+.rmp{
+    background-color: black;
+    margin: auto;
+    width: 80vw;
+    text-align: center;
+    padding: 30px 0px;
+
+}
+
+h2{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #1ab0f7;
+    padding-bottom: 1.2rem;
+
+}
+
+p{
+  
+}
+
+/*Hero------------------------*/
+#hero{
+    padding-bottom: 0px;
+}
+#hero img{
+    max-height: 40vh;
+
+}
+
+/*logo slider*/
+.logoSlider {
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    display: flex; /* must be flex */
+  
+    transition-timing-function: linear !important;
+}
+
+.swiper-slide {
+    margin: 25px 0;
+    width: auto;
+}
+
+.swiper-slide img {
+    height: 40px;
+    display: block;
+}
+
+/*About*/
+#about{
+    background-color: black;
+}
+
+/*Services and Projects */
+#serviceGrid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 4 columns */
+    gap: 16px; /* space between boxes */
+    width: 80vw;
+    max-width: 1224px!important;
+
+}
+
+.box{
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    padding: 12px;
+    transition: all 0.3s ease;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    
+}
+
+
+
+
+.box:hover{
+    border-color: #1ab0f7;
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.box span{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    margin-left: 12px;
+    margin-top: 12px;
+    text-align: left;
+    color: #1ab0f7;
+
+}
+    
+.box p{
+    margin-bottom: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 0;
+    text-align: left;
+    color: #ffffff;
+}
+
+.box ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.box ul li{
+    font-size: 1.1rem;
+    color: #cccccc;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 16px;
+    text-align: left;
+    
+}
+
+/* small bullet effect */
+.box ul li::before{
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #1ab0f7;
+}
+
+.box:hover span{
+    color: #1ab0f7;
+}
+
+
+/*=========*/
+/*Projects*/
+#projectGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 16px;
+    width: 80vw;
+    max-width: 1224px;
+    margin: 0 auto;
+}
+
+/* Project boxes only */
+.projectBox {
+    background: #1a1a1a;
+     border: 1px solid #2a2a2a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.projectInfo h3 a{
+    border: 1px solid #1ab0f7;
+}
+
+.projectInfo h3 a:hover{
+    background-color: #0d8ecf;
+
+}
+
+.projectBox img {
+    width: 100%;
+   
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: 0.3s ease;
+}
+
+.projectBox:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+   
+}
+
+.projectInfo{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+}
+
+.projectBox:hover{
+     border: 2px solid #1ab0f7;
+}
+
+/* Tablet */
+@media (max-width: 920px) {
+    #projectGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+
+
+/*----------------------------------------/
+
+/*servise Media*/
+@media (max-width: 768px){
+
+    /* hide list by default */
+.accordion ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+/* open state */
+.accordion.active ul {
+    max-height: 500px; /* enough height */
+}
+
+/* make title clickable */
+.accordion span {
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+
+/* + icon */
+.accordion span::after {
+    content: "+";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1ab0f7;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+/* - icon when open */
+.accordion.active span::after {
+    content: "-";
+}
+
+/* remove fixed height so it can expand */
+.accordion {
+    height: auto;
+}
+}
+
+@media (min-width: 768px) {
+    #serviceGrid,
+    #projectGrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #projectGrid .box{
+    height: 300px;
+}
+
+    /*V2-----------------------------------------------------------------------------------------*/
+    #hero{
+        min-height: 80vh;
+    }
+    #hero .rmp img{
+        padding-top: 5vh;
+        min-height: 70vh;
+        
+    }  
+    /*V2-----------------------------------------------------------------------------------------*/
+}
+
+@media (min-width:1224px) {
+
+    #serviceGrid{
+        grid-template-columns: repeat(4, 1fr);
+        margin: auto;
+    }
+
+    #projectGrid{
+        grid-template-columns: repeat(2, 1fr);
+        margin: auto;
+        
+    }
+
+    #about{
+        max-width: 1224px;
+    }
+
+}
+
+
+/*Accrodian*/
+
+/*contact*/
+#footer{
+    background: #0a0a0a;
+    color: #ccc;
+    padding: 40px 0 20px;
+    max-width: 1224px;
+    margin: auto;
+}
+
+.footer-container{
+    width: 80vw;
+    max-width: 1224px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Columns */
+.footer-col h3{
+    color: #1ab0f7;
+    margin-bottom: 15px;
+}
+
+.footer-col p{
+    margin: 5px 0;
+}
+
+/* Logo */
+
+.footer-col img{
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Menu */
+.footer-col ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li{
+    margin-bottom: 8px;
+}
+
+.footer-col a{
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-col a:hover{
+    color: #1ab0f7;
+}
+
+/* Form */
+.footer-col form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-col input,
+.footer-col textarea{
+    background: #111;
+    border: 1px solid #2a2a2a;
+    padding: 8px;
+    color: #fff;
+}
+
+.footer-col textarea{
+    resize: none;
+}
+
+.footer-col button{
+    background: #1ab0f7;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.footer-col button:hover{
+    background: #0d8ecf;
+}
+
+/* Bottom */
+.footer-bottom{
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #222;
+    padding-top: 15px;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+
+
+/* Default (mobile first already OK) */
+
+/* Tablet / small desktop */
+@media (max-width: 1079px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "brand menu"
+            "form form";
+        gap: 20px;
+       
+    }
+
+    .footer-col img{
+        min-width: 280px!important;
+    }
+
+
+    /* Assign areas */
+    .footer-col:nth-child(1) {
+        grid-area: brand;
+    }
+
+    .footer-col:nth-child(2) {
+        grid-area: menu;
+    }
+
+    .footer-col:nth-child(3) {
+        grid-area: form;
+    }
+}
+
+/* Large desktop (1080px and above) */
+@media (min-width: 1080px) {
+    .footer-container {
+        grid-template-columns: 35% 15% 50%;
+        grid-template-areas: none;
+    }
+}
