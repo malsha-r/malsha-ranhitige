@@ -563,6 +563,10 @@ p{
        
     }
 
+    .footer-menu{
+        display:none!important;
+    }
+
     .footer-col img{
         min-width: 280px!important;
     }
