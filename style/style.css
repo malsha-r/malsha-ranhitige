@@ -584,6 +584,10 @@ p{
     .footer-col:nth-child(3) {
         grid-area: form;
     }
+
+    .footer-col-2{
+        display: none;
+    }
 }
 
 /* Large desktop (1080px and above) */
